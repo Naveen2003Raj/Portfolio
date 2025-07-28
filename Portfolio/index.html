@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="img/letter-n (1).png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+     <style>
+    .nav-name {
+  position: relative;
+  text-decoration: none;
+  color:white;
+  }
+  .nav-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: red;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav-name:hover::after {
+      width: 100%;
+  }
+  @media (max-width: 1024px)  { 
+        .nav-name:hover::after{
+            width: 60%;
+        }
+  }  
+  .headings {
+    position: absolute;
+    top: 170px;
+    left: 100px;
+    color: #fff; 
+    font-size: 50px; 
+    animation: fadeSlideIn 1s ease-in-out both;
+ }
+  .name {  
+    top: 280px;
+    left: 100px;
+    position: absolute; 
+    font-size: 40px;  
+    overflow: hidden; 
+    color:white; 
+    white-space: nowrap;  
+    animation: typing 3s steps(22, end) forwards , blink 1s ;;
+  } 
+     @keyframes typing { 
+      0% { 
+          width: 0% 
+      } 
+  
+      100% { 
+          width: 70% 
+      } 
+  }  
+@keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translatex(80px); 
+      }
+      100% {
+        opacity: 1;
+        transform: translatex(0); 
+      }
+    }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.full-screen-img {
+      width: 100vw;
+      height: 80vh;
+      object-fit: cover; /* ensures the image covers without distortion */
+    }
+.button-contain {
+  position: relative;
+  top: -180px;
+  left: 120px;
+  width: 150px;
+  height: 70px;
+  background-color: #ffffff;
+  box-shadow:  3px 0px 3px 2px red;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.rotate {
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(54.7deg,  #F5004F 12%,#7C00FE 100%);
+  animation-name: rotate;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-play-state: running;
+}
+#resume{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 60px;
+  border-radius: 100px;
+  font-size: 25px;
+border: none;
+background-color:rgb(219, 202, 202);
+}
+  .click {
+  padding: 5px 20px;
+  width: 190px;
+  height: 50px;
+  font-size: 23px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+}
+.click:hover {
+  background-color: #ddd;
+}
+.click.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+   #btn-con {
+    padding:30px;
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px;
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25); 
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+   }
+  #btn-con:hover {
+    box-shadow: 0 0 30px 7px rgba(0, 191, 255, 0.7); 
+  }
+  #boxes{
+    background-color:rgba(107, 62, 155, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 170px;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+  }
+  #boxes:hover{
+      transform: translateY(-5px);
+  }
+  .icons{
+     padding:0px 10px 0px 0px  ;
+    height: 40px;
+    width: 50px;
+    justify-content: left;
+  }
+  @media (max-width:500px){
+     #boxes{
+    background-color: #7C00FE;
+    border-radius: 8px;
+    height: 60px;
+    width: 143px;
+    transition: transform 0.3s ease;
+  }
+   .icons{
+    height: 40px;
+    width: 43px;
+    margin-left: -10px;
+  }
+  }
+  .pro-title{
+  position: absolute;
+  height: fit-content;
+  left: 465px;
+}
+.card1{
+  height: 455px;
+  width: 400px;
+  margin: 90px 0px 0px 90px;
+}
+.card-titles{
+  font-size: 24px;
+  position: absolute;
+  margin: 210px 0px 0px 122px;
+}
+  .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #ffffff;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    #contact{
+       padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 32px 0 rgba(59, 59, 192,0.5); 
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+    }
+</style>
+</head>
+<body>
+  <!--navbar section for links-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white px-3 sticky-top " style="box-shadow: 0 6px 7px -1px red;">
+    <span class="d-flex justify-content-center ">
+ <img src="img/icons8-mortal-kombat-64.png" alt="Logo" style="background-attachment: fixed;" width="50" height="50" class="d-inline-block align-text-top me-1 mx-4 " >
+    <span class=" display-5 fs-3 text-white mt-2">Naveen</span>
+    </span>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon "></span></button>
+                <div class="collapse navbar-collapse bg-dark md:d-flex justify-content-center " id="navbarNav">
+                  <ul class="navbar-nav ms-4 gap-lg-5 me-5 ">
+                    <li class="nav-item navnames"><a  class="nav-link active nav-name" href="#home">Home</a></li>
+                    <li class="nav-item navnames "><a class="nav-link nav-name" href="#about">About</a></li>
+                    <li class="nav-item navnames "><a class="nav-link nav-name" href="#Skills">Skills</a></li>
+                    <li class="nav-item navnames"><a class="nav-link  nav-name" href="#Projects">Projects</a></li>
+                    <li class="nav-item navnames"><a class="nav-link  nav-name" href="#contact">Contacts</a></li>
+                  </ul>
+                </div>
+</nav>
+<!--Home section-->
+<div id="home">
+    <div>
+      <img src="img/home.jpg" class="img-fluid full-screen-img" alt="Full Screen Image">
+       <div class="headings">
+          <h1 class="mt-5 ">Welcome to my Portfolio</h1>
+       </div>
+          <div class="name ">
+            <h2 class="mt-4">Hi, I'm Naveenraj</h2> 
+          </div>
+            <div class="button-contain ">
+              <div class="rotate"></div>
+                <button id="resume"><a href="./files/Naveen _Resume.pdf" download style="text-decoration: none; color: black;">Resume</a></button>
+            </div> 
+    </div>
+</div>
+
+<!--About section-->
+<div id="about" class="container ">
+    <div class="row">
+      <div class=" d-flex col-12  col-lg-3 col-sm-12 ms-md-5 ps-md-5 pb-sm-4 ps-sm-0 mb-2 pb-sm-4 justify-content-center">
+        <img src="img/use.jpg" alt="" style="height: 250px; width: 250px; border: 2px solid black;" class="img-animate-left">
+      </div>    
+        <div class="col ms-4">
+          <h1 class="display-6 fw-bold ">ABOUT</h1>
+            <p style="font-size: 18px;">Hi! 😄 Myself Naveenraj, a driven and enthusiastic person with a foundation in frontend development. With experience in front-end technologies, I thrive on creating efficient and scalable solutions. <br>My hands-on projects and internships have fueled my love for coding and competitive programming. I am eager to continue learning, growing, and applying my skills to make a meaningful impact.</p>
+        </div>
+    </div>
+</div>
+ <!--btn container for intern and education-->   
+<div class="container mt-2">
+  <div class="row ms-3 me-3 ms-md-5 ps-md-3">
+    <div class="col-md-3 d-flex flex-column mt-2 align-items-start ">
+      <button id="intern-btn" class="click mb-3 w-100">Internship</button>
+      <button id="edu-btn" class="click w-100 mb-4">Education</button>
+    </div>
+      <div class="col-md-7 ms-md-5" id="btn-con">
+        <div id="internship" class="active">
+          <p style="font-size: 18px; text-transform: capitalize; color: black;">
+          <b>Company Name:</b> Joy Innovations<br><br>
+          <b>Course:</b> Full Stack Development<br><br>
+          <b>Duration:</b> July 15th to August 14th, 2024<br>
+          Doing internship at Joy Innovations in full-stack development, learning and working on both front-end and back-end technologies.
+          </p>
+        </div>
+           <div id="education" style="display: none;">
+            <p style="font-size: 18px; text-transform: capitalize; color: black;">
+            <b>College:</b> Ganadipathy Tulsi's Jain Engineering College<br>
+            <b>Branch:</b> B.Tech - Information Technology<br>
+            <b>CGPA:</b> 8.6<br>
+            <b>Certifications:</b><br>
+            - Networks Essentials (Naan Mudalvan)<br>
+            - Microsoft Fundamentals (Naan Mudalvan)<br>
+            - Fundamentals of Cybersecurity (Naan Mudalvan)<br>
+            - Introduction to Agile Methodology (Naan Mudalvan)
+          </p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!--skills section-->
+<div id="Skills" class="container mt-5 ">
+  <h1 class="d-flex  justify-content-center mb-5 ">SKILLS</h1>
+      <div class="row">
+          <div class="col-lg-6 col-sm-12">
+              <table class="table table-borderless">
+                 <thead class="">
+                    <tr >
+                      <th class="pb-4">Tools</th>
+                    </tr>
+                  </thead>
+                    <tr class="d-flex">
+                      <td class="border border-2 border-black me-3" id="boxes"><img src="img/visual-studio-code.png" class="icons" alt="">VS Code</td>
+                      <td class="border border-2 border-black  me-3" id="boxes"><img src="img/ibm.png" class="icons" alt=""><span class="">IBM Cognos</span></td>
+                      <td class="border border-2 border-black  " id="boxes"><img src="img/microsoft-powerpoint.png" class="icons" alt="">Powerpoint</td>
+                    </tr>
+              </table>
+                 <table class="table table-borderless">
+                   <tr class="d-flex">
+                      <td class="border border-2 border-black   me-3 " id="boxes" ><img src="img/jupyter_app_icon_161280.png" class="icons" alt="">Jupter </td>
+                      <td class="border border-2 border-black  me-3 " id="boxes"> <img src="img/excel.png" class="icons" alt="">Excel</td>
+                      <td class="border border-2 border-black    " id="boxes"> <img src="img/microsoft-word.png" class="icons" alt="">Word</td>
+                   </tr>
+                     <tr class="d-flex">
+                      <td class="border border-2 border-black   me-3 " id="boxes"><img src="img/microsoft-power-bi.png" class="icons" alt=""> Microsoft BI</td>
+                     </tr>
+                </table>
+          </div>
+            <div class="col-6">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th class="pb-4">Frontend tools</th>
+                  </tr>
+                </thead>
+                <tr class="d-flex">
+                  <td class="border border-2 border-black  ms-1 me-3" id="boxes"><img src="img/html (1).png" class="icons" alt=""> HTML</td>
+                  <td class="border border-2 border-black me-3" id="boxes"><img src="img/css (1).png" class="icons" alt="">CSS </td>
+                  <td class="border border-2 border-black" id="boxes"><img src="img/icons8-bootstrap-50.png" class="icons" alt="">Bootstrap</td>
+                </tr> 
+              </table>
+                 <table class="table table-borderless">
+                  <tr>
+                   <thead>
+                     <th class="">Programming Languages</th>
+                   </thead>
+                  </tr>
+                    <tr class="d-flex">
+                      <td class="border border-2 border-black  " id="boxes"><img src="img/python.png" class="icons" alt="">Python</td>
+                    </tr>
+               </table>
+            </div>
+        </div>  
+</div>
+
+<!--Projects section-->
+<div id="Projects" class="container">
+    <h1 class="text-center mb-5">Projects</h1>
+     <div class="project-card p-3 mb-4 rounded shadow-sm">
+            <div class="row flex-md-row-reverse align-items-center">
+               <div class="col-md-6 mb-3 mb-md-0">
+                  <img src="img/project.jpg" class="img-fluid rounded shadow" alt="Aadhaar Verification Project">
+               </div>
+                  <div class="col-md-6">
+                     <h3>Image-Based Aadhaar & Smart Card Verification for Secure Government Loan Waivers</h3>
+                     <p>I led a team of three to build an automated system using QR code scanning to verify Aadhaar and smart card details. It accurately extracts and validates user data to speed up the process and reduce manual errors.<br><br>
+                    As the team lead, I planned the workflow, guided my teammates, and ensured smooth integration. We used Python and Flask for the backend, HTML/CSS/JavaScript for the frontend, OpenCV and Pyzbar for QR scanning, and SQLite for secure data storage.</p>
+                 </div>
+              </div>
+          </div>
+       <!--Next-->
+        <div class="project-card p-3 mb-4 rounded shadow-sm">
+           <div class="row align-items-center">
+               <div class="col-md-6 mb-3 mb-md-0">
+                 <img src="img/prd.jpg" class="img-fluid rounded shadow" alt="Product Sales Analysis">
+               </div>
+               <div class="col-md-6">
+                 <h3>Product Sales Analysis</h3>
+                 <p>In my 5th semester, I led a team of three in a Naan Mudhalvan course on Data Analytics with IBM Cognos.<br><br>
+                 We gathered datasets, analyzed them using IBM Cognos, and submitted the project on GitHub, gaining hands-on experience in data analysis.</p>
+               </div>
+             </div>
+        </div>
+     <!--Next-->
+          <div class="project-card p-3 mb-4 rounded shadow-sm">
+         <div class="row flex-md-row-reverse align-items-center">
+            <div class="col-md-6 mb-3 mb-md-0">
+               <img src="img/canva.png" class="img-fluid rounded shadow" alt="Canva Clone">
+            </div>
+               <div class="col-md-6">
+                 <h3>Canva Clone</h3>
+                 <p>During my internship, I replicated the Canva website's frontend in five days, closely matching the original interface to ensure accuracy.<br><br>
+                 This project enhanced my web development and design skills while showcasing my ability to work efficiently.</p>
+               </div>
+           </div>
+       </div>
+      <!--Next-->
+          <div class="project-card p-3 mb-4 rounded shadow-sm">
+               <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <h3>Restaurant Landing Page</h3>
+                    <p>Created a landing page using HTML, CSS as part of a hands-on project during my FIIT course. The page includes navigation bar, feature highlights, pricing cards, and a contact. This project helped me strengthen my skills in frontend layout, basic design structure, and page building using clean HTML and CSS practices.<br><br>
+                    <a href="https://landingpageusinghtml.netlify.app/" target="_blank">View Live</a> </p>
+                  </div>
+                    <div class="col-md-6">
+                        <h3> FIIT Project Website</h3>
+                        <p> Created a basic multi-section website using HTML, CSS, and Bootstrap as part of a hands-on project during my FIIT course. The site includes pages like Dashboard,Classes and is designed with clean layout and user-friendly navigation to show my frontend development skills.</p>
+                        <a href="https://fiitproject.netlify.app/" target="_blank">View Live</a> |
+                    </div>
+          </div>
+</div>
+
+<!--Contact Section-->
+<div id="contact" class="container my-5 border border-1 bg-secondary-subtle ">
+  <h1 class="text-md-end pe-4 mb-4 text-center">Contact</h1>
+      <div class="row">
+          <div class="col-md-6 mb-4">
+          <h3>Connect with me</h3>
+          <p>If you'd like to know more about me or my work, or just want to say hello, send me a message!</p>
+          <form action="mailto:naveenraj1732@gmail.com" method="post" enctype="text/plain">
+              <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+              </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                    </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+                      <div class="mt-2">
+                         <a href="mailto:naveenraj1732@gmail.com">Or send email directly</a>
+                      </div>
+          </form>
+          </div>
+              <div class="col-12 col-md-6 d-md-flex justify-content-end align-items-end mb-3 pe-5 ">
+                  <div class="d-none d-md-block">
+                    <!--  show all in one column -->
+                     <div class="mb-3">
+                        <h5 class="text-md-end">Email</h5>
+                        <p><a href="mailto:naveenraj1732@gmail.com">naveenraj1732@gmail.com</a></p>
+                     </div>
+                         <div class="mb-3">
+                             <h5  class="text-md-end">Mobile</h5>
+                             <p  class="text-md-end">+91 9442101499</p>
+                         </div>
+                            <div class="mb-3">
+                               <h5  class="text-md-end">Address</h5>
+                               <p  class="text-md-end">Virupakshipuram, Vellore</p>
+                           </div>
+                             <div class="mb-3">
+                               <h5  class="text-md-end">Social Links</h5>
+                                 <div class="d-flex gap-3 flex-wrap d-md-flex justify-content-end">
+                                     <a href="https://www.instagram.com/itz_naveen.raj/#" target="_blank">
+                                     <img src="img/instagram.png" alt="Instagram" width="32"></a>
+                                    <a href="https://www.linkedin.com/in/naveenraj-c-9b5b2729b" target="_blank">
+                                    <img src="img/linkedin.png" alt="LinkedIn" width="32"></a>
+                                    <a href="https://github.com/Naveen2003Raj" target="_blank">
+                                    <img src="img/github.png" alt="GitHub" width="32"></a>
+                                </div>
+                             </div>
+               </div>
+
+            <div class="d-block d-md-none">
+                  <!-- Mobile view: show in two rows -->
+                <div class="row mb-3">
+                      <div class="col-6">
+                         <h5 class="text-md-end">Email</h5>
+                            <p class="small"><a href="mailto:naveenraj1732@gmail.com">naveenraj1732@gmail.com</a></p>
+                      </div>
+                         <div class="col-6">
+                            <h5>Mobile</h5>
+                            <p class="small">+91 9442101499</p>
+                         </div>
+                  </div>
+                    <div class="row">
+                           <div class="col-6">
+                              <h5>Address</h5>
+                              <p class="small">Virupakshipuram, Vellore</p>
+                           </div>
+                              <div class="col-6">
+                                  <h5>Social</h5>
+                                     <div class="d-flex flex-wrap gap-2">
+                                         <a href="https://www.instagram.com/itz_naveen.raj/#" target="_blank">
+                                         <img src="img/instagram.png" alt="Instagram" width="28"></a>
+                                          <a href="https://www.linkedin.com/in/naveenraj-c-9b5b2729b" target="_blank">
+                                          <img src="img/linkedin.png" alt="LinkedIn" width="28"></a>
+                                          <a href="https://github.com/Naveen2003Raj" target="_blank">
+                                         <img src="img/github.png" alt="GitHub" width="28"></a>
+                                        </div>
+                                </div>
+                      </div>
+                </div>
+</div>
+<!--Js code-->
+<script>
+  const internBtn = document.getElementById("intern-btn");
+  const eduBtn = document.getElementById("edu-btn");
+  const internship = document.getElementById("internship");
+  const education = document.getElementById("education");
+
+  internBtn.addEventListener("click", () => {
+    internBtn.classList.add("active");
+    eduBtn.classList.remove("active");
+    internship.style.display = "block";
+    education.style.display = "none";
+  });
+
+  eduBtn.addEventListener("click", () => {
+    eduBtn.classList.add("active");
+    internBtn.classList.remove("active");
+    internship.style.display = "none";
+    education.style.display = "block";
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
